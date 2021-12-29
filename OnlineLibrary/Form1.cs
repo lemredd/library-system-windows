@@ -30,5 +30,15 @@ namespace OnlineLibrary
         {
 
         }
+
+        private void panelFormCtrlEmail_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelFormCtrlPass_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
