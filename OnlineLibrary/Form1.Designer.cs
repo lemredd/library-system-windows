@@ -146,6 +146,7 @@
             // 
             // buttonAdminSignIn
             // 
+            this.buttonAdminSignIn.AccessibleName = "buttonAdminSignIn";
             this.buttonAdminSignIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(123)))), ((int)(((byte)(0)))));
             this.buttonAdminSignIn.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonAdminSignIn.FlatAppearance.BorderSize = 0;
@@ -158,6 +159,7 @@
             this.buttonAdminSignIn.TabIndex = 0;
             this.buttonAdminSignIn.Text = "Sign in as librarian";
             this.buttonAdminSignIn.UseVisualStyleBackColor = false;
+            this.buttonAdminSignIn.Click += new System.EventHandler(this.buttonAdminSignIn_Click);
             // 
             // panelFormCtrlPass
             // 
@@ -294,6 +296,7 @@
             this.pictureBackground.Size = new System.Drawing.Size(1264, 681);
             this.pictureBackground.TabIndex = 0;
             this.pictureBackground.TabStop = false;
+            this.pictureBackground.Click += new System.EventHandler(this.pictureBackground_Click);
             // 
             // FormLibrarySystem
             // 
@@ -305,6 +308,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLibrarySystem";
             this.Text = "Library System";
+            this.Load += new System.EventHandler(this.FormLibrarySystem_Load);
             this.panelSidebar.ResumeLayout(false);
             this.panelForm.ResumeLayout(false);
             this.panelFormPasswordSettings.ResumeLayout(false);
