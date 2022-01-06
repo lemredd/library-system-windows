@@ -43,7 +43,9 @@ namespace OnlineLibrary
 
         private void buttonAdminSignIn_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            Librarian_UI f2= new Librarian_UI();
+            f2.Show();
         }
 
         private void pictureBackground_Click(object sender, EventArgs e)
@@ -53,7 +55,7 @@ namespace OnlineLibrary
 
         private void FormLibrarySystem_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

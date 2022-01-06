@@ -58,6 +58,30 @@
     <Compile Include="Librarian UI.Designer.cs">
       <DependentUpon>Librarian UI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Panel LibrarianUI\UserControl_Books.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel LibrarianUI\UserControl_Books.Designer.cs">
+      <DependentUpon>UserControl_Books.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel LibrarianUI\UserControl_Profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel LibrarianUI\UserControl_Profile.Designer.cs">
+      <DependentUpon>UserControl_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel LibrarianUI\UserControl_Schedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel LibrarianUI\UserControl_Schedule.Designer.cs">
+      <DependentUpon>UserControl_Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panel LibrarianUI\UserControl_Settings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panel LibrarianUI\UserControl_Settings.Designer.cs">
+      <DependentUpon>UserControl_Settings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -65,6 +89,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Librarian UI.resx">
       <DependentUpon>Librarian UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel LibrarianUI\UserControl_Books.resx">
+      <DependentUpon>UserControl_Books.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel LibrarianUI\UserControl_Profile.resx">
+      <DependentUpon>UserControl_Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel LibrarianUI\UserControl_Schedule.resx">
+      <DependentUpon>UserControl_Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panel LibrarianUI\UserControl_Settings.resx">
+      <DependentUpon>UserControl_Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
