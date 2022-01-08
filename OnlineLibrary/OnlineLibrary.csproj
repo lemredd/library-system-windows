@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BorrowerPanels\UserControlBrowseBooks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BorrowerPanels\UserControlBrowseBooks.Designer.cs">
+      <DependentUpon>UserControlBrowseBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowerPanels\UserControlMyBooks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BorrowerPanels\UserControlMyBooks.Designer.cs">
+      <DependentUpon>UserControlMyBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowerPanels\UserControlProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BorrowerPanels\UserControlProfile.Designer.cs">
+      <DependentUpon>UserControlProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowerPanels\UserControlSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BorrowerPanels\UserControlSettings.Designer.cs">
+      <DependentUpon>UserControlSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="BorrowerUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +84,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BorrowerPanels\UserControlBrowseBooks.resx">
+      <DependentUpon>UserControlBrowseBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorrowerPanels\UserControlMyBooks.resx">
+      <DependentUpon>UserControlMyBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorrowerPanels\UserControlProfile.resx">
+      <DependentUpon>UserControlProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorrowerPanels\UserControlSettings.resx">
+      <DependentUpon>UserControlSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BorrowerUI.resx">
       <DependentUpon>BorrowerUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +151,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\language.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\language1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-icon 2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
