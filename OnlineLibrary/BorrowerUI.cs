@@ -16,5 +16,10 @@ namespace OnlineLibrary
         {
             InitializeComponent();
         }
+
+        private void BorrowerUI_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
