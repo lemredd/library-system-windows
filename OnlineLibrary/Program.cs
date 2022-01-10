@@ -16,7 +16,7 @@ namespace OnlineLibrary
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLibrarySystem());
+            Application.Run(new BorrowerUI());
         }
     }
 }
