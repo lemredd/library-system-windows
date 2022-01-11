@@ -28,8 +28,8 @@ namespace OnlineLibrary
 
             activeContent = contentToLoad;
             contentToLoad.Dock = DockStyle.Fill;
-            this.panellibrarian.Controls.Add(contentToLoad);
-            this.panellibrarian.Tag = contentToLoad;
+            this.panelContent.Controls.Add(contentToLoad);
+            this.panelContent.Tag = contentToLoad;
             contentToLoad.BringToFront();
             contentToLoad.Show();
         }

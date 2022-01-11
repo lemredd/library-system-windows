@@ -143,6 +143,7 @@
             this.buttonSignInStudent.TabIndex = 1;
             this.buttonSignInStudent.Text = "Sign in as student";
             this.buttonSignInStudent.UseVisualStyleBackColor = false;
+            this.buttonSignInStudent.Click += new System.EventHandler(this.buttonSignInStudent_Click);
             // 
             // buttonAdminSignIn
             // 
@@ -296,7 +297,6 @@
             this.pictureBackground.Size = new System.Drawing.Size(1264, 681);
             this.pictureBackground.TabIndex = 0;
             this.pictureBackground.TabStop = false;
-            this.pictureBackground.Click += new System.EventHandler(this.pictureBackground_Click);
             // 
             // FormLibrarySystem
             // 
@@ -308,7 +308,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLibrarySystem";
             this.Text = "Library System";
-            this.Load += new System.EventHandler(this.FormLibrarySystem_Load);
             this.panelSidebar.ResumeLayout(false);
             this.panelForm.ResumeLayout(false);
             this.panelFormPasswordSettings.ResumeLayout(false);

@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -27,10 +42,32 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>bin\Release\builds\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Test\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|x64'">
+    <OutputPath>bin\x64\Test\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,29 +83,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BorrowerPanels\UserControlBrowseBooks.cs">
+    <Compile Include="BorrowerPanels\Books\MyBooks.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BorrowerPanels\UserControlBrowseBooks.Designer.cs">
-      <DependentUpon>UserControlBrowseBooks.cs</DependentUpon>
+    <Compile Include="BorrowerPanels\Books\MyBooks.Designer.cs">
+      <DependentUpon>MyBooks.cs</DependentUpon>
     </Compile>
-    <Compile Include="BorrowerPanels\UserControlMyBooks.cs">
+    <Compile Include="BorrowerPanels\Books\BrowseBooks.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BorrowerPanels\UserControlMyBooks.Designer.cs">
-      <DependentUpon>UserControlMyBooks.cs</DependentUpon>
+    <Compile Include="BorrowerPanels\Books\BrowseBooks.Designer.cs">
+      <DependentUpon>BrowseBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowerPanels\UserControlBooks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BorrowerPanels\UserControlBooks.Designer.cs">
+      <DependentUpon>UserControlBooks.cs</DependentUpon>
     </Compile>
     <Compile Include="BorrowerPanels\UserControlProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="BorrowerPanels\UserControlProfile.Designer.cs">
       <DependentUpon>UserControlProfile.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BorrowerPanels\UserControlSettings.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="BorrowerPanels\UserControlSettings.Designer.cs">
-      <DependentUpon>UserControlSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="BorrowerUI.cs">
       <SubType>Form</SubType>
@@ -82,49 +119,43 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Librarian UI.cs">
+    <Compile Include="LibrarianUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Librarian UI.Designer.cs">
-      <DependentUpon>Librarian UI.cs</DependentUpon>
+    <Compile Include="LibrarianUI.Designer.cs">
+      <DependentUpon>LibrarianUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel LibrarianUI\UserControl_Books.cs">
+    <Compile Include="LibrarianPanels\UserControl_Books.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel LibrarianUI\UserControl_Books.Designer.cs">
+    <Compile Include="LibrarianPanels\UserControl_Books.Designer.cs">
       <DependentUpon>UserControl_Books.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel LibrarianUI\UserControl_Profile.cs">
+    <Compile Include="LibrarianPanels\UserControl_Profile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel LibrarianUI\UserControl_Profile.Designer.cs">
+    <Compile Include="LibrarianPanels\UserControl_Profile.Designer.cs">
       <DependentUpon>UserControl_Profile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panel LibrarianUI\UserControl_Schedule.cs">
+    <Compile Include="LibrarianPanels\UserControl_Schedule.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panel LibrarianUI\UserControl_Schedule.Designer.cs">
+    <Compile Include="LibrarianPanels\UserControl_Schedule.Designer.cs">
       <DependentUpon>UserControl_Schedule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Panel LibrarianUI\UserControl_Settings.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Panel LibrarianUI\UserControl_Settings.Designer.cs">
-      <DependentUpon>UserControl_Settings.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BorrowerPanels\UserControlBrowseBooks.resx">
-      <DependentUpon>UserControlBrowseBooks.cs</DependentUpon>
+    <EmbeddedResource Include="BorrowerPanels\Books\BrowseBooks.resx">
+      <DependentUpon>BrowseBooks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BorrowerPanels\UserControlMyBooks.resx">
-      <DependentUpon>UserControlMyBooks.cs</DependentUpon>
+    <EmbeddedResource Include="BorrowerPanels\Books\MyBooks.resx">
+      <DependentUpon>MyBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorrowerPanels\UserControlBooks.resx">
+      <DependentUpon>UserControlBooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BorrowerPanels\UserControlProfile.resx">
       <DependentUpon>UserControlProfile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BorrowerPanels\UserControlSettings.resx">
-      <DependentUpon>UserControlSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BorrowerUI.resx">
       <DependentUpon>BorrowerUI.cs</DependentUpon>
@@ -132,20 +163,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Librarian UI.resx">
-      <DependentUpon>Librarian UI.cs</DependentUpon>
+    <EmbeddedResource Include="LibrarianUI.resx">
+      <DependentUpon>LibrarianUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel LibrarianUI\UserControl_Books.resx">
+    <EmbeddedResource Include="LibrarianPanels\UserControl_Books.resx">
       <DependentUpon>UserControl_Books.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel LibrarianUI\UserControl_Profile.resx">
+    <EmbeddedResource Include="LibrarianPanels\UserControl_Profile.resx">
       <DependentUpon>UserControl_Profile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panel LibrarianUI\UserControl_Schedule.resx">
+    <EmbeddedResource Include="LibrarianPanels\UserControl_Schedule.resx">
       <DependentUpon>UserControl_Schedule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Panel LibrarianUI\UserControl_Settings.resx">
-      <DependentUpon>UserControl_Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -205,6 +233,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout-icon 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookanizer logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

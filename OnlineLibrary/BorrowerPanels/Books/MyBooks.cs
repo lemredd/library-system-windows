@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OnlineLibrary.BorrowerPanels
+namespace OnlineLibrary.BorrowerPanels.Books
 {
-    public partial class UserControlSettings : UserControl
+    public partial class MyBooks : UserControl
     {
-        public UserControlSettings()
+        public MyBooks()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

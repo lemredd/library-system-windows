@@ -48,14 +48,11 @@ namespace OnlineLibrary
             f2.Show();
         }
 
-        private void pictureBackground_Click(object sender, EventArgs e)
+        private void buttonSignInStudent_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void FormLibrarySystem_Load(object sender, EventArgs e)
-        {
-
+            this.Hide();
+            BorrowerUI borrowerUI = new BorrowerUI();
+            borrowerUI.Show();
         }
     }
 }

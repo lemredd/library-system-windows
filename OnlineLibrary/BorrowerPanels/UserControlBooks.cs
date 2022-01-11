@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OnlineLibrary.BorrowerPanels
 {
-    public partial class UserControlMyBooks : UserControl
+    public partial class UserControlBooks : UserControl
     {
-        public UserControlMyBooks()
+        public UserControlBooks()
         {
             InitializeComponent();
         }
