@@ -30,12 +30,12 @@
         {
             this.panelContent = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnProfile = new System.Windows.Forms.Button();
+            this.btnBooks = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelContent
@@ -50,68 +50,68 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.pbLogo);
+            this.panel1.Controls.Add(this.btnLogout);
+            this.panel1.Controls.Add(this.btnProfile);
+            this.panel1.Controls.Add(this.btnBooks);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(111, 450);
             this.panel1.TabIndex = 2;
             // 
-            // pictureBox1
+            // pbLogo
             // 
-            this.pictureBox1.Image = global::OnlineLibrary.Properties.Resources.bookanizer_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(105, 89);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.pbLogo.Image = global::OnlineLibrary.Properties.Resources.bookanizer_logo;
+            this.pbLogo.Location = new System.Drawing.Point(3, 3);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(105, 76);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 4;
+            this.pbLogo.TabStop = false;
             // 
-            // button2
+            // btnLogout
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.SandyBrown;
-            this.button2.Image = global::OnlineLibrary.Properties.Resources.profile_icon;
-            this.button2.Location = new System.Drawing.Point(3, 171);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 74);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.ForeColor = System.Drawing.Color.SandyBrown;
+            this.btnLogout.Image = global::OnlineLibrary.Properties.Resources.logout_icon;
+            this.btnLogout.Location = new System.Drawing.Point(3, 365);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(105, 85);
+            this.btnLogout.TabIndex = 2;
+            this.btnLogout.Text = "\r\n";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // button1
+            // btnProfile
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.SandyBrown;
-            this.button1.Image = global::OnlineLibrary.Properties.Resources.book;
-            this.button1.Location = new System.Drawing.Point(3, 98);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 67);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnProfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnProfile.FlatAppearance.BorderSize = 0;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.ForeColor = System.Drawing.Color.SandyBrown;
+            this.btnProfile.Image = global::OnlineLibrary.Properties.Resources.profile_icon;
+            this.btnProfile.Location = new System.Drawing.Point(3, 208);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(105, 63);
+            this.btnProfile.TabIndex = 1;
+            this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
-            // button3
+            // btnBooks
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.SandyBrown;
-            this.button3.Image = global::OnlineLibrary.Properties.Resources.logout_icon;
-            this.button3.Location = new System.Drawing.Point(3, 365);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 85);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "\r\n";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnBooks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnBooks.FlatAppearance.BorderSize = 0;
+            this.btnBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBooks.ForeColor = System.Drawing.Color.SandyBrown;
+            this.btnBooks.Image = global::OnlineLibrary.Properties.Resources.book;
+            this.btnBooks.Location = new System.Drawing.Point(3, 105);
+            this.btnBooks.Name = "btnBooks";
+            this.btnBooks.Size = new System.Drawing.Size(105, 67);
+            this.btnBooks.TabIndex = 0;
+            this.btnBooks.UseVisualStyleBackColor = false;
+            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click);
             // 
             // BorrowerUI
             // 
@@ -125,9 +125,10 @@
             this.DoubleBuffered = true;
             this.Name = "BorrowerUI";
             this.Text = "BorrowerUI";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BorrowerUI_FormClosing);
             this.Load += new System.EventHandler(this.BorrowerUI_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -136,9 +137,9 @@
 
         private System.Windows.Forms.Panel panelContent;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.Button btnBooks;
+        private System.Windows.Forms.PictureBox pbLogo;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

@@ -83,28 +83,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BorrowerPanels\Books\MyBooks.cs">
+    <Compile Include="BorrowerMenus\Books\MyBooks.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BorrowerPanels\Books\MyBooks.Designer.cs">
+    <Compile Include="BorrowerMenus\Books\MyBooks.Designer.cs">
       <DependentUpon>MyBooks.cs</DependentUpon>
     </Compile>
-    <Compile Include="BorrowerPanels\Books\BrowseBooks.cs">
+    <Compile Include="BorrowerMenus\Books\BrowseBooks.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BorrowerPanels\Books\BrowseBooks.Designer.cs">
+    <Compile Include="BorrowerMenus\Books\BrowseBooks.Designer.cs">
       <DependentUpon>BrowseBooks.cs</DependentUpon>
     </Compile>
-    <Compile Include="BorrowerPanels\UserControlBooks.cs">
+    <Compile Include="BorrowerMenus\UserControlBooks.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BorrowerPanels\UserControlBooks.Designer.cs">
+    <Compile Include="BorrowerMenus\UserControlBooks.Designer.cs">
       <DependentUpon>UserControlBooks.cs</DependentUpon>
     </Compile>
-    <Compile Include="BorrowerPanels\UserControlProfile.cs">
+    <Compile Include="BorrowerMenus\UserControlProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BorrowerPanels\UserControlProfile.Designer.cs">
+    <Compile Include="BorrowerMenus\UserControlProfile.Designer.cs">
       <DependentUpon>UserControlProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="BorrowerUI.cs">
@@ -113,11 +113,23 @@
     <Compile Include="BorrowerUI.Designer.cs">
       <DependentUpon>BorrowerUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="LibrarianMenus\AccountMenus\Form_AddOrEditAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="LibrarianMenus\AccountMenus\Form_AddOrEditAccount.Designer.cs">
+      <DependentUpon>Form_AddOrEditAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibrarianMenus\AccountMenus\Form_BorrowerAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibrarianMenus\AccountMenus\Form_BorrowerAccounts.Designer.cs">
+      <DependentUpon>Form_BorrowerAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LibrarianUI.cs">
       <SubType>Form</SubType>
@@ -125,54 +137,61 @@
     <Compile Include="LibrarianUI.Designer.cs">
       <DependentUpon>LibrarianUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="LibrarianPanels\UserControl_Books.cs">
+    <Compile Include="LibrarianMenus\UserControl_Books.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LibrarianPanels\UserControl_Books.Designer.cs">
+    <Compile Include="LibrarianMenus\UserControl_Books.Designer.cs">
       <DependentUpon>UserControl_Books.cs</DependentUpon>
     </Compile>
-    <Compile Include="LibrarianPanels\UserControl_Profile.cs">
+    <Compile Include="LibrarianMenus\UserControl_Account.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LibrarianPanels\UserControl_Profile.Designer.cs">
-      <DependentUpon>UserControl_Profile.cs</DependentUpon>
+    <Compile Include="LibrarianMenus\UserControl_Account.Designer.cs">
+      <DependentUpon>UserControl_Account.cs</DependentUpon>
     </Compile>
-    <Compile Include="LibrarianPanels\UserControl_Schedule.cs">
+    <Compile Include="LibrarianMenus\UserControl_Schedule.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LibrarianPanels\UserControl_Schedule.Designer.cs">
+    <Compile Include="LibrarianMenus\UserControl_Schedule.Designer.cs">
       <DependentUpon>UserControl_Schedule.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BorrowerPanels\Books\BrowseBooks.resx">
+    <Compile Include="Validators.cs" />
+    <EmbeddedResource Include="BorrowerMenus\Books\BrowseBooks.resx">
       <DependentUpon>BrowseBooks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BorrowerPanels\Books\MyBooks.resx">
+    <EmbeddedResource Include="BorrowerMenus\Books\MyBooks.resx">
       <DependentUpon>MyBooks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BorrowerPanels\UserControlBooks.resx">
+    <EmbeddedResource Include="BorrowerMenus\UserControlBooks.resx">
       <DependentUpon>UserControlBooks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BorrowerPanels\UserControlProfile.resx">
+    <EmbeddedResource Include="BorrowerMenus\UserControlProfile.resx">
       <DependentUpon>UserControlProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BorrowerUI.resx">
       <DependentUpon>BorrowerUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="LibrarianMenus\AccountMenus\Form_AddOrEditAccount.resx">
+      <DependentUpon>Form_AddOrEditAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibrarianMenus\AccountMenus\Form_BorrowerAccounts.resx">
+      <DependentUpon>Form_BorrowerAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LibrarianUI.resx">
       <DependentUpon>LibrarianUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LibrarianPanels\UserControl_Books.resx">
+    <EmbeddedResource Include="LibrarianMenus\UserControl_Books.resx">
       <DependentUpon>UserControl_Books.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LibrarianPanels\UserControl_Profile.resx">
-      <DependentUpon>UserControl_Profile.cs</DependentUpon>
+    <EmbeddedResource Include="LibrarianMenus\UserControl_Account.resx">
+      <DependentUpon>UserControl_Account.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LibrarianPanels\UserControl_Schedule.resx">
+    <EmbeddedResource Include="LibrarianMenus\UserControl_Schedule.resx">
       <DependentUpon>UserControl_Schedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -248,6 +267,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bookanizer logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-icon1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

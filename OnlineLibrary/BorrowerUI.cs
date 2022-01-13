@@ -13,9 +13,12 @@ namespace OnlineLibrary
     public partial class BorrowerUI : Form
     {
         private UserControl activeContent;
+        public event ChildToParentFormEventHandler logoutEvent;
+
         public BorrowerUI()
         {
             InitializeComponent();
+            loadContent(new BorrowerPanels.UserControlBooks());
         }
 
         private void BorrowerUI_Load(object sender, EventArgs e)
@@ -37,19 +40,27 @@ namespace OnlineLibrary
             contentToLoad.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBooks_Click(object sender, EventArgs e)
         {
         loadContent(new BorrowerPanels.UserControlBooks());
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnProfile_Click(object sender, EventArgs e)
         {
             loadContent(new BorrowerPanels.UserControlProfile());
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            loadContent(new BorrowerPanels.UserControlSettings());
+            this.Close();
+        }
+
+        private void BorrowerUI_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to log out?", "Log Out", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.logoutEvent();
+            } else e.Cancel = true;
         }
     }
 }

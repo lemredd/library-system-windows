@@ -153,6 +153,16 @@ namespace OnlineLibrary.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logout_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("logout-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap new_logo2 {
             get {
                 object obj = ResourceManager.GetObject("new-logo2", resourceCulture);
@@ -176,6 +186,16 @@ namespace OnlineLibrary.Properties {
         internal static System.Drawing.Bitmap profile_icon {
             get {
                 object obj = ResourceManager.GetObject("profile-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap profile_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("profile-icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

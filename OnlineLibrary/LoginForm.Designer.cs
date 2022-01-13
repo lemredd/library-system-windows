@@ -33,7 +33,6 @@
             this.panelForm = new System.Windows.Forms.Panel();
             this.panelFormPasswordSettings = new System.Windows.Forms.Panel();
             this.linkLabelForgotPass = new System.Windows.Forms.LinkLabel();
-            this.checkBoxRememberPass = new System.Windows.Forms.CheckBox();
             this.panelButtons = new System.Windows.Forms.Panel();
             this.buttonSignInStudent = new System.Windows.Forms.Button();
             this.buttonAdminSignIn = new System.Windows.Forms.Button();
@@ -91,7 +90,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelFormPasswordSettings.BackColor = System.Drawing.Color.White;
             this.panelFormPasswordSettings.Controls.Add(this.linkLabelForgotPass);
-            this.panelFormPasswordSettings.Controls.Add(this.checkBoxRememberPass);
             this.panelFormPasswordSettings.Location = new System.Drawing.Point(0, 290);
             this.panelFormPasswordSettings.Name = "panelFormPasswordSettings";
             this.panelFormPasswordSettings.Size = new System.Drawing.Size(370, 45);
@@ -107,16 +105,7 @@
             this.linkLabelForgotPass.TabIndex = 1;
             this.linkLabelForgotPass.TabStop = true;
             this.linkLabelForgotPass.Text = "Forgot Password?";
-            // 
-            // checkBoxRememberPass
-            // 
-            this.checkBoxRememberPass.AutoSize = true;
-            this.checkBoxRememberPass.Location = new System.Drawing.Point(4, 17);
-            this.checkBoxRememberPass.Name = "checkBoxRememberPass";
-            this.checkBoxRememberPass.Size = new System.Drawing.Size(126, 17);
-            this.checkBoxRememberPass.TabIndex = 0;
-            this.checkBoxRememberPass.Text = "Remember Password";
-            this.checkBoxRememberPass.UseVisualStyleBackColor = true;
+            this.linkLabelForgotPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelForgotPass_LinkClicked);
             // 
             // panelButtons
             // 
@@ -137,11 +126,11 @@
             this.buttonSignInStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSignInStudent.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSignInStudent.ForeColor = System.Drawing.Color.White;
-            this.buttonSignInStudent.Location = new System.Drawing.Point(230, 0);
+            this.buttonSignInStudent.Location = new System.Drawing.Point(219, 0);
             this.buttonSignInStudent.Name = "buttonSignInStudent";
-            this.buttonSignInStudent.Size = new System.Drawing.Size(143, 45);
+            this.buttonSignInStudent.Size = new System.Drawing.Size(154, 45);
             this.buttonSignInStudent.TabIndex = 1;
-            this.buttonSignInStudent.Text = "Sign in as student";
+            this.buttonSignInStudent.Text = "Sign in as Borrower";
             this.buttonSignInStudent.UseVisualStyleBackColor = false;
             this.buttonSignInStudent.Click += new System.EventHandler(this.buttonSignInStudent_Click);
             // 
@@ -172,7 +161,6 @@
             this.panelFormCtrlPass.Name = "panelFormCtrlPass";
             this.panelFormCtrlPass.Size = new System.Drawing.Size(373, 70);
             this.panelFormCtrlPass.TabIndex = 3;
-            this.panelFormCtrlPass.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormCtrlPass_Paint);
             // 
             // panel1
             // 
@@ -220,7 +208,6 @@
             this.panelFormCtrlEmail.Name = "panelFormCtrlEmail";
             this.panelFormCtrlEmail.Size = new System.Drawing.Size(373, 70);
             this.panelFormCtrlEmail.TabIndex = 2;
-            this.panelFormCtrlEmail.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormCtrlEmail_Paint);
             // 
             // panelTextBoxEmailContainer
             // 
@@ -275,7 +262,6 @@
             this.labelLogo.Size = new System.Drawing.Size(267, 46);
             this.labelLogo.TabIndex = 1;
             this.labelLogo.Text = "Online Library";
-            this.labelLogo.Click += new System.EventHandler(this.label1_Click);
             // 
             // picboxLogo
             // 
@@ -286,7 +272,6 @@
             this.picboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picboxLogo.TabIndex = 0;
             this.picboxLogo.TabStop = false;
-            this.picboxLogo.Click += new System.EventHandler(this.picboxLogo_Click);
             // 
             // pictureBackground
             // 
@@ -341,7 +326,6 @@
         private System.Windows.Forms.Label labelFormPassword;
         private System.Windows.Forms.Button buttonAdminSignIn;
         private System.Windows.Forms.LinkLabel linkLabelForgotPass;
-        private System.Windows.Forms.CheckBox checkBoxRememberPass;
         private System.Windows.Forms.Button buttonSignInStudent;
         private System.Windows.Forms.Panel panelTextBoxEmailContainer;
         private System.Windows.Forms.TextBox textBoxEmail;

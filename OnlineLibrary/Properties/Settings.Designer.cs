@@ -22,5 +22,31 @@ namespace OnlineLibrary.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LEM-LAPTOP\\SQLEXPRESS;Initial Catalog=BookanizerDB;Integrated Securit" +
+            "y=True;Pooling=False")]
+        public string LibrarianConn {
+            get {
+                return ((string)(this["LibrarianConn"]));
+            }
+            set {
+                this["LibrarianConn"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=tcp:lem-laptop,49172;Initial Catalog=BookanizerDB;Integrated Security" +
+            "=True;Pooling=False")]
+        public string RegularConn {
+            get {
+                return ((string)(this["RegularConn"]));
+            }
+            set {
+                this["RegularConn"] = value;
+            }
+        }
     }
 }

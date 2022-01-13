@@ -1,6 +1,6 @@
 ﻿namespace OnlineLibrary
 {
-    partial class Librarian_UI
+    partial class LibrarianUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,97 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Librarian_UI));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibrarianUI));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.btnBooks = new System.Windows.Forms.Button();
+            this.btnAccounts = new System.Windows.Forms.Button();
+            this.btnSchedules = new System.Windows.Forms.Button();
             this.panelContent = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumBlue;
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnLogout);
+            this.panel2.Controls.Add(this.picLogo);
+            this.panel2.Controls.Add(this.btnBooks);
+            this.panel2.Controls.Add(this.btnAccounts);
+            this.panel2.Controls.Add(this.btnSchedules);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(89, 450);
             this.panel2.TabIndex = 1;
             // 
-            // button1
+            // btnLogout
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.SandyBrown;
-            this.button1.Image = global::OnlineLibrary.Properties.Resources.logout_icon;
-            this.button1.Location = new System.Drawing.Point(3, 365);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 85);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "\r\n";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.ForeColor = System.Drawing.Color.SandyBrown;
+            this.btnLogout.Image = global::OnlineLibrary.Properties.Resources.logout_icon;
+            this.btnLogout.Location = new System.Drawing.Point(3, 365);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(83, 85);
+            this.btnLogout.TabIndex = 6;
+            this.btnLogout.Text = "\r\n";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // pictureBox1
+            // picLogo
             // 
-            this.pictureBox1.Image = global::OnlineLibrary.Properties.Resources.bookanizer_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(83, 76);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.picLogo.Image = global::OnlineLibrary.Properties.Resources.bookanizer_logo;
+            this.picLogo.Location = new System.Drawing.Point(3, 3);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(83, 76);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 5;
+            this.picLogo.TabStop = false;
             // 
-            // button5
+            // btnBooks
             // 
-            this.button5.AccessibleName = "btnBook";
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(18, 94);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(50, 40);
-            this.button5.TabIndex = 4;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnBooks.AccessibleName = "btnBook";
+            this.btnBooks.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBooks.BackgroundImage")));
+            this.btnBooks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBooks.FlatAppearance.BorderSize = 0;
+            this.btnBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBooks.Location = new System.Drawing.Point(18, 94);
+            this.btnBooks.Name = "btnBooks";
+            this.btnBooks.Size = new System.Drawing.Size(50, 40);
+            this.btnBooks.TabIndex = 4;
+            this.btnBooks.UseVisualStyleBackColor = true;
+            this.btnBooks.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button3
+            // btnAccounts
             // 
-            this.button3.AccessibleName = "btnProfile";
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(18, 218);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 40);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnAccounts.AccessibleName = "btnProfile";
+            this.btnAccounts.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAccounts.BackgroundImage")));
+            this.btnAccounts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAccounts.FlatAppearance.BorderSize = 0;
+            this.btnAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccounts.Location = new System.Drawing.Point(18, 218);
+            this.btnAccounts.Name = "btnAccounts";
+            this.btnAccounts.Size = new System.Drawing.Size(50, 40);
+            this.btnAccounts.TabIndex = 2;
+            this.btnAccounts.UseVisualStyleBackColor = true;
+            this.btnAccounts.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnSchedules
             // 
-            this.button2.AccessibleName = "btnCalendar";
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(12, 156);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 40);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnSchedules.AccessibleName = "btnCalendar";
+            this.btnSchedules.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSchedules.BackgroundImage")));
+            this.btnSchedules.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSchedules.FlatAppearance.BorderSize = 0;
+            this.btnSchedules.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSchedules.Location = new System.Drawing.Point(12, 156);
+            this.btnSchedules.Name = "btnSchedules";
+            this.btnSchedules.Size = new System.Drawing.Size(60, 40);
+            this.btnSchedules.TabIndex = 1;
+            this.btnSchedules.UseVisualStyleBackColor = true;
+            this.btnSchedules.Click += new System.EventHandler(this.button2_Click);
             // 
             // panelContent
             // 
@@ -128,7 +129,7 @@
             this.panelContent.Size = new System.Drawing.Size(681, 435);
             this.panelContent.TabIndex = 2;
             // 
-            // Librarian_UI
+            // LibrarianUI
             // 
             this.AccessibleName = "librarianui";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,21 +140,22 @@
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panel2);
             this.DoubleBuffered = true;
-            this.Name = "Librarian_UI";
+            this.Name = "LibrarianUI";
             this.Text = "Librarian Menu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LibrarianUI_FormClosing);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAccounts;
+        private System.Windows.Forms.Button btnSchedules;
+        private System.Windows.Forms.Button btnBooks;
+        private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel panelContent;
     }
 }

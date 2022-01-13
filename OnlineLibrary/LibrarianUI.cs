@@ -10,13 +10,15 @@ using System.Windows.Forms;
 
 namespace OnlineLibrary
 {
-    public partial class Librarian_UI : Form
+    public partial class LibrarianUI : Form
     {
-        private UserControl activeContent = null;
+        private UserControl activeContent;
+        public event ChildToParentFormEventHandler logoutEvent;
 
-        public Librarian_UI()
+        public LibrarianUI()
         {
             InitializeComponent();
+            loadContent(new Panel_LibrarianUI.UserControl_Books());
         }
 
         private void loadContent(UserControl contentToLoad)
@@ -39,19 +41,9 @@ namespace OnlineLibrary
             loadContent(new Panel_LibrarianUI.UserControl_Profile());
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Refresh();
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
             loadContent(new Panel_LibrarianUI.UserControl_Books());
-        }
-
-        private void panellibrarian_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -59,9 +51,18 @@ namespace OnlineLibrary
             loadContent(new Panel_LibrarianUI.UserControl_Schedule());
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            loadContent(new Panel_LibrarianUI.UserControl_Settings());
+                this.Close();
+        }
+
+        private void LibrarianUI_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to log out?", "Log Out", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.logoutEvent();
+            }
+            else e.Cancel = true;
         }
     }
 }

@@ -1,7 +1,12 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OnlineLibrary.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LibrarianConn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=LEM-LAPTOP\SQLEXPRESS;Initial Catalog=BookanizerDB;Integrated Security=True;Pooling=False</Value>
+    </Setting>
+    <Setting Name="RegularConn" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=tcp:lem-laptop,49172;Initial Catalog=BookanizerDB;Integrated Security=True;Pooling=False</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
