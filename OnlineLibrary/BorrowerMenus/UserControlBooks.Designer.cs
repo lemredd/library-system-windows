@@ -28,18 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.lblBooks = new System.Windows.Forms.Label();
-            this.panelBooksTab = new System.Windows.Forms.Panel();
+            this.panelBooksContent = new System.Windows.Forms.Panel();
             this.btnBrowseBooks = new System.Windows.Forms.Button();
             this.btnMyBooks = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // lblBooks
             // 
@@ -52,13 +45,13 @@
             this.lblBooks.TabIndex = 3;
             this.lblBooks.Text = "Books";
             // 
-            // panelBooksTab
+            // panelBooksContent
             // 
-            this.panelBooksTab.BackColor = System.Drawing.Color.White;
-            this.panelBooksTab.Location = new System.Drawing.Point(0, 49);
-            this.panelBooksTab.Name = "panelBooksTab";
-            this.panelBooksTab.Size = new System.Drawing.Size(655, 386);
-            this.panelBooksTab.TabIndex = 4;
+            this.panelBooksContent.BackColor = System.Drawing.Color.White;
+            this.panelBooksContent.Location = new System.Drawing.Point(0, 49);
+            this.panelBooksContent.Name = "panelBooksContent";
+            this.panelBooksContent.Size = new System.Drawing.Size(655, 386);
+            this.panelBooksContent.TabIndex = 4;
             // 
             // btnBrowseBooks
             // 
@@ -72,6 +65,7 @@
             this.btnBrowseBooks.TabIndex = 5;
             this.btnBrowseBooks.Text = "Browse Books";
             this.btnBrowseBooks.UseVisualStyleBackColor = false;
+            this.btnBrowseBooks.Click += new System.EventHandler(this.btnBrowseBooks_Click);
             // 
             // btnMyBooks
             // 
@@ -85,6 +79,7 @@
             this.btnMyBooks.TabIndex = 5;
             this.btnMyBooks.Text = "My Books";
             this.btnMyBooks.UseVisualStyleBackColor = false;
+            this.btnMyBooks.Click += new System.EventHandler(this.btnMyBooks_Click);
             // 
             // UserControlBooks
             // 
@@ -93,7 +88,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.btnMyBooks);
             this.Controls.Add(this.btnBrowseBooks);
-            this.Controls.Add(this.panelBooksTab);
+            this.Controls.Add(this.panelBooksContent);
             this.Controls.Add(this.lblBooks);
             this.Name = "UserControlBooks";
             this.Size = new System.Drawing.Size(655, 435);
@@ -103,9 +98,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label lblBooks;
-        private System.Windows.Forms.Panel panelBooksTab;
+        private System.Windows.Forms.Panel panelBooksContent;
         private System.Windows.Forms.Button btnBrowseBooks;
         private System.Windows.Forms.Button btnMyBooks;
     }

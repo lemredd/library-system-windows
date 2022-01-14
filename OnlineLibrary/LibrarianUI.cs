@@ -53,7 +53,7 @@ namespace OnlineLibrary
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-                this.Close();
+            this.Close();
         }
 
         private void LibrarianUI_FormClosing(object sender, FormClosingEventArgs e)

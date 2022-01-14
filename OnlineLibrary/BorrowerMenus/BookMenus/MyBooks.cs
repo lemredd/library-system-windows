@@ -8,13 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OnlineLibrary.GeneralTemplates
+namespace OnlineLibrary.BorrowerMenus.BookMenus
 {
-    public partial class BookRowTemplate : UserControl
+    public partial class MyBooks : UserControl
     {
-        public BookRowTemplate()
+        private readonly SessionUser currentSessionUser;
+
+        public MyBooks(SessionUser currentSessionUser)
         {
             InitializeComponent();
+            this.currentSessionUser = currentSessionUser;
         }
     }
 }

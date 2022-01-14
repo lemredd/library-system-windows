@@ -21,7 +21,7 @@ namespace OnlineLibrary
         {
             InitializeComponent();
             this.currentSessionUser = currentSessionUser;
-            loadContent(new BorrowerPanels.UserControlBooks());
+            loadContent(new BorrowerPanels.UserControlBooks(this.currentSessionUser));
         }
 
         private void BorrowerUI_Load(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace OnlineLibrary
 
         private void btnBooks_Click(object sender, EventArgs e)
         {
-        loadContent(new BorrowerPanels.UserControlBooks());
+            loadContent(new BorrowerPanels.UserControlBooks(this.currentSessionUser));
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
