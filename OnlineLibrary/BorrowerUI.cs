@@ -10,14 +10,17 @@ using System.Windows.Forms;
 
 namespace OnlineLibrary
 {
+
     public partial class BorrowerUI : Form
     {
         private UserControl activeContent;
         public event ChildToParentFormEventHandler logoutEvent;
+        private readonly SessionUser currentSessionUser;
 
-        public BorrowerUI()
+        public BorrowerUI(SessionUser currentSessionUser)
         {
             InitializeComponent();
+            this.currentSessionUser = currentSessionUser;
             loadContent(new BorrowerPanels.UserControlBooks());
         }
 
@@ -47,7 +50,7 @@ namespace OnlineLibrary
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            loadContent(new BorrowerPanels.UserControlProfile());
+            loadContent(new BorrowerPanels.UserControlProfile(this.currentSessionUser));
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

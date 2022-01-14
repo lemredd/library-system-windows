@@ -113,6 +113,12 @@
     <Compile Include="BorrowerUI.Designer.cs">
       <DependentUpon>BorrowerUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneralTemplates\BookRowTemplate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GeneralTemplates\BookRowTemplate.Designer.cs">
+      <DependentUpon>BookRowTemplate.cs</DependentUpon>
+    </Compile>
     <Compile Include="LibrarianMenus\AccountMenus\Form_AddOrEditAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BorrowerUI.resx">
       <DependentUpon>BorrowerUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralTemplates\BookRowTemplate.resx">
+      <DependentUpon>BookRowTemplate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LibrarianMenus\AccountMenus\Form_AddOrEditAccount.resx">
       <DependentUpon>Form_AddOrEditAccount.cs</DependentUpon>

@@ -10,6 +10,8 @@ namespace OnlineLibrary
 
     public partial class FormLibrarySystem : Form
     {
+        private SessionUser currentSessionUser = new SessionUser();
+
         public FormLibrarySystem()
         {
             InitializeComponent();
@@ -46,7 +48,10 @@ namespace OnlineLibrary
                     if (lookupResult.Rows.Count > 0)
                     {
                         this.Hide();
-                        BorrowerUI borrowerUI = new BorrowerUI();
+
+                        currentSessionUser.sessionUserID = Convert.ToInt32(lookupResult.Rows[0]["account_id"].ToString());
+
+                        BorrowerUI borrowerUI = new BorrowerUI(currentSessionUser);
                         borrowerUI.logoutEvent += Form_LogoutEvent;
                         borrowerUI.Show();
                     }
@@ -96,7 +101,7 @@ namespace OnlineLibrary
         private void linkLabelForgotPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("If you are a borrower:\nContact the librarian about your password\n\n" +
-                            "If you are the librarian:\nContact the IT personnel about your password");
+                            "If you are the librarian:\nContact the IT personnel about your password", "Forgot Password?");
         }
     }
 }

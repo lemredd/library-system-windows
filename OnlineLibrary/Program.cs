@@ -6,6 +6,12 @@ using System.Windows.Forms;
 
 namespace OnlineLibrary
 {
+    public class SessionUser
+    {
+        public int sessionUserID { get; set; }
+        public String sessionUsername { get; set; }
+    }
+
     internal static class Program
     {
         /// <summary>
