@@ -142,9 +142,19 @@
             2328,
             0,
             0});
+            this.numIsbn.Minimum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
             this.numIsbn.Name = "numIsbn";
             this.numIsbn.Size = new System.Drawing.Size(162, 20);
             this.numIsbn.TabIndex = 7;
+            this.numIsbn.Value = new decimal(new int[] {
+            -727379968,
+            232,
+            0,
+            0});
             // 
             // lblISBN
             // 

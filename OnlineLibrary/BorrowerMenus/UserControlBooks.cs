@@ -47,7 +47,7 @@ namespace OnlineLibrary.BorrowerPanels
 
         private void btnBrowseBooks_Click(object sender, EventArgs e)
         {
-            loadContent(new BorrowerMenus.BookMenus.BrowseBooks());
+            loadContent(new BorrowerMenus.BookMenus.BrowseBooks(this.currentSessionUser));
         }
     }
 }

@@ -13,9 +13,13 @@ namespace OnlineLibrary.BorrowerMenus.BookMenus
 {
     public partial class BrowseBooks : UserControl
     {
-        public BrowseBooks()
+        private SessionUser currentSessionUser;
+
+        public BrowseBooks(SessionUser currentSessionUser)
         {
             InitializeComponent();
+
+            this.currentSessionUser = currentSessionUser;
             populateTable();
         }
 
@@ -39,7 +43,7 @@ namespace OnlineLibrary.BorrowerMenus.BookMenus
         {
             if (dgvBooks.CurrentRow != null)
             {
-                Form_BookDetails bookDetails = new Form_BookDetails(dgvBooks.CurrentRow);
+                Form_BookDetails bookDetails = new Form_BookDetails(dgvBooks.CurrentRow, this.currentSessionUser);
                 bookDetails.Show();
             } else MessageBox.Show("Please select a book from the table below.");
         }

@@ -137,6 +137,12 @@
     <Compile Include="LibrarianMenus\BookMenus\Form_AddOrEditBook.Designer.cs">
       <DependentUpon>Form_AddOrEditBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="LibrarianMenus\ScheduleMenus\Form_EditSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibrarianMenus\ScheduleMenus\Form_EditSchedule.Designer.cs">
+      <DependentUpon>Form_EditSchedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LibrarianMenus\BookMenus\Form_AddOrEditBook.resx">
       <DependentUpon>Form_AddOrEditBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibrarianMenus\ScheduleMenus\Form_EditSchedule.resx">
+      <DependentUpon>Form_EditSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

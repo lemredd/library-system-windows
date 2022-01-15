@@ -43,6 +43,10 @@
             this.lblISBN = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pbBookCover = new System.Windows.Forms.PictureBox();
+            this.dtDateStart = new System.Windows.Forms.DateTimePicker();
+            this.lblDateStart = new System.Windows.Forms.Label();
+            this.lblDateEnd = new System.Windows.Forms.Label();
+            this.dtDateEnd = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.numCopiesLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numIsbn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBookCover)).BeginInit();
@@ -54,32 +58,33 @@
             this.btnBorrow.FlatAppearance.BorderSize = 0;
             this.btnBorrow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrow.ForeColor = System.Drawing.Color.White;
-            this.btnBorrow.Location = new System.Drawing.Point(182, 363);
+            this.btnBorrow.Location = new System.Drawing.Point(182, 398);
             this.btnBorrow.Name = "btnBorrow";
-            this.btnBorrow.Size = new System.Drawing.Size(120, 36);
+            this.btnBorrow.Size = new System.Drawing.Size(147, 36);
             this.btnBorrow.TabIndex = 24;
             this.btnBorrow.Text = "Borrow Book";
             this.btnBorrow.UseVisualStyleBackColor = false;
+            this.btnBorrow.Click += new System.EventHandler(this.btnBorrow_Click);
             // 
             // numCopiesLeft
             // 
             this.numCopiesLeft.Enabled = false;
-            this.numCopiesLeft.Location = new System.Drawing.Point(163, 273);
+            this.numCopiesLeft.Location = new System.Drawing.Point(198, 214);
             this.numCopiesLeft.Name = "numCopiesLeft";
-            this.numCopiesLeft.Size = new System.Drawing.Size(139, 20);
+            this.numCopiesLeft.Size = new System.Drawing.Size(131, 20);
             this.numCopiesLeft.TabIndex = 22;
             // 
             // numIsbn
             // 
             this.numIsbn.Enabled = false;
-            this.numIsbn.Location = new System.Drawing.Point(163, 224);
+            this.numIsbn.Location = new System.Drawing.Point(15, 214);
             this.numIsbn.Maximum = new decimal(new int[] {
             1316134911,
             2328,
             0,
             0});
             this.numIsbn.Name = "numIsbn";
-            this.numIsbn.Size = new System.Drawing.Size(139, 20);
+            this.numIsbn.Size = new System.Drawing.Size(177, 20);
             this.numIsbn.TabIndex = 23;
             // 
             // tbCategories
@@ -88,13 +93,13 @@
             this.tbCategories.Location = new System.Drawing.Point(14, 108);
             this.tbCategories.Multiline = true;
             this.tbCategories.Name = "tbCategories";
-            this.tbCategories.Size = new System.Drawing.Size(288, 87);
+            this.tbCategories.Size = new System.Drawing.Size(315, 87);
             this.tbCategories.TabIndex = 20;
             // 
             // lblBookCover
             // 
             this.lblBookCover.AutoSize = true;
-            this.lblBookCover.Location = new System.Drawing.Point(11, 208);
+            this.lblBookCover.Location = new System.Drawing.Point(12, 241);
             this.lblBookCover.Name = "lblBookCover";
             this.lblBookCover.Size = new System.Drawing.Size(63, 13);
             this.lblBookCover.TabIndex = 18;
@@ -114,15 +119,15 @@
             this.dtpDateAuth.Enabled = false;
             this.dtpDateAuth.Location = new System.Drawing.Point(14, 65);
             this.dtpDateAuth.Name = "dtpDateAuth";
-            this.dtpDateAuth.Size = new System.Drawing.Size(288, 20);
+            this.dtpDateAuth.Size = new System.Drawing.Size(315, 20);
             this.dtpDateAuth.TabIndex = 16;
             // 
             // tbAuthor
             // 
             this.tbAuthor.Enabled = false;
-            this.tbAuthor.Location = new System.Drawing.Point(159, 26);
+            this.tbAuthor.Location = new System.Drawing.Point(182, 26);
             this.tbAuthor.Name = "tbAuthor";
-            this.tbAuthor.Size = new System.Drawing.Size(143, 20);
+            this.tbAuthor.Size = new System.Drawing.Size(147, 20);
             this.tbAuthor.TabIndex = 14;
             // 
             // tbTitle
@@ -130,7 +135,7 @@
             this.tbTitle.Enabled = false;
             this.tbTitle.Location = new System.Drawing.Point(14, 26);
             this.tbTitle.Name = "tbTitle";
-            this.tbTitle.Size = new System.Drawing.Size(131, 20);
+            this.tbTitle.Size = new System.Drawing.Size(162, 20);
             this.tbTitle.TabIndex = 15;
             // 
             // lblDateAuth
@@ -145,7 +150,7 @@
             // lblAuthor
             // 
             this.lblAuthor.AutoSize = true;
-            this.lblAuthor.Location = new System.Drawing.Point(160, 10);
+            this.lblAuthor.Location = new System.Drawing.Point(179, 10);
             this.lblAuthor.Name = "lblAuthor";
             this.lblAuthor.Size = new System.Drawing.Size(38, 13);
             this.lblAuthor.TabIndex = 10;
@@ -154,7 +159,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(160, 257);
+            this.label1.Location = new System.Drawing.Point(195, 198);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 11;
@@ -163,7 +168,7 @@
             // lblISBN
             // 
             this.lblISBN.AutoSize = true;
-            this.lblISBN.Location = new System.Drawing.Point(160, 208);
+            this.lblISBN.Location = new System.Drawing.Point(12, 198);
             this.lblISBN.Name = "lblISBN";
             this.lblISBN.Size = new System.Drawing.Size(32, 13);
             this.lblISBN.TabIndex = 12;
@@ -182,19 +187,55 @@
             // 
             this.pbBookCover.Image = global::OnlineLibrary.Properties.Resources.addcover;
             this.pbBookCover.InitialImage = global::OnlineLibrary.Properties.Resources.addcover;
-            this.pbBookCover.Location = new System.Drawing.Point(12, 224);
+            this.pbBookCover.Location = new System.Drawing.Point(12, 257);
             this.pbBookCover.Name = "pbBookCover";
             this.pbBookCover.Size = new System.Drawing.Size(131, 175);
             this.pbBookCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbBookCover.TabIndex = 21;
             this.pbBookCover.TabStop = false;
             // 
+            // dtDateStart
+            // 
+            this.dtDateStart.Location = new System.Drawing.Point(182, 273);
+            this.dtDateStart.Name = "dtDateStart";
+            this.dtDateStart.Size = new System.Drawing.Size(147, 20);
+            this.dtDateStart.TabIndex = 26;
+            // 
+            // lblDateStart
+            // 
+            this.lblDateStart.AutoSize = true;
+            this.lblDateStart.Location = new System.Drawing.Point(179, 257);
+            this.lblDateStart.Name = "lblDateStart";
+            this.lblDateStart.Size = new System.Drawing.Size(66, 13);
+            this.lblDateStart.TabIndex = 25;
+            this.lblDateStart.Text = "Borrow From";
+            // 
+            // lblDateEnd
+            // 
+            this.lblDateEnd.AutoSize = true;
+            this.lblDateEnd.Location = new System.Drawing.Point(179, 306);
+            this.lblDateEnd.Name = "lblDateEnd";
+            this.lblDateEnd.Size = new System.Drawing.Size(64, 13);
+            this.lblDateEnd.TabIndex = 25;
+            this.lblDateEnd.Text = "Borrow Until";
+            // 
+            // dtDateEnd
+            // 
+            this.dtDateEnd.Location = new System.Drawing.Point(182, 322);
+            this.dtDateEnd.Name = "dtDateEnd";
+            this.dtDateEnd.Size = new System.Drawing.Size(147, 20);
+            this.dtDateEnd.TabIndex = 26;
+            // 
             // Form_BookDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(312, 411);
+            this.ClientSize = new System.Drawing.Size(341, 446);
+            this.Controls.Add(this.dtDateEnd);
+            this.Controls.Add(this.dtDateStart);
+            this.Controls.Add(this.lblDateEnd);
+            this.Controls.Add(this.lblDateStart);
             this.Controls.Add(this.btnBorrow);
             this.Controls.Add(this.numCopiesLeft);
             this.Controls.Add(this.numIsbn);
@@ -238,5 +279,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblISBN;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.DateTimePicker dtDateStart;
+        private System.Windows.Forms.Label lblDateStart;
+        private System.Windows.Forms.Label lblDateEnd;
+        private System.Windows.Forms.DateTimePicker dtDateEnd;
     }
 }

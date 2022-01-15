@@ -28,38 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvSchedules = new System.Windows.Forms.DataGridView();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.txtScheduleID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtAccountID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtBookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtDateStart = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtDateEnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtBookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtIsbn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSchedules)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvSchedules
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvSchedules.AllowUserToAddRows = false;
+            this.dgvSchedules.AllowUserToDeleteRows = false;
+            this.dgvSchedules.BackgroundColor = System.Drawing.Color.White;
+            this.dgvSchedules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSchedules.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.txtScheduleID,
             this.txtAccountID,
-            this.txtBookID,
             this.txtDateStart,
             this.txtDateEnd,
-            this.txtStatus});
-            this.dataGridView1.Location = new System.Drawing.Point(15, 17);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(622, 320);
-            this.dataGridView1.TabIndex = 0;
+            this.txtStatus,
+            this.txtBookID,
+            this.txtTitle,
+            this.txtIsbn});
+            this.dgvSchedules.Location = new System.Drawing.Point(15, 17);
+            this.dgvSchedules.Name = "dgvSchedules";
+            this.dgvSchedules.ReadOnly = true;
+            this.dgvSchedules.Size = new System.Drawing.Size(622, 320);
+            this.dgvSchedules.TabIndex = 0;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Crimson;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(15, 343);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(100, 30);
+            this.btnDelete.TabIndex = 1;
+            this.btnDelete.Text = "Delete Schedule";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtScheduleID
             // 
-            this.txtScheduleID.DataPropertyName = "schedule_id";
+            this.txtScheduleID.DataPropertyName = "sched_id";
             this.txtScheduleID.HeaderText = "Schedule ID";
             this.txtScheduleID.Name = "txtScheduleID";
             this.txtScheduleID.ReadOnly = true;
@@ -70,13 +89,7 @@
             this.txtAccountID.HeaderText = "Account ID";
             this.txtAccountID.Name = "txtAccountID";
             this.txtAccountID.ReadOnly = true;
-            // 
-            // txtBookID
-            // 
-            this.txtBookID.DataPropertyName = "book_id";
-            this.txtBookID.HeaderText = "Book ID";
-            this.txtBookID.Name = "txtBookID";
-            this.txtBookID.ReadOnly = true;
+            this.txtAccountID.Visible = false;
             // 
             // txtDateStart
             // 
@@ -99,31 +112,26 @@
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
             // 
-            // btnEdit
+            // txtBookID
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(15, 343);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(88, 30);
-            this.btnEdit.TabIndex = 1;
-            this.btnEdit.Text = "Edit Schedule";
-            this.btnEdit.UseVisualStyleBackColor = false;
+            this.txtBookID.DataPropertyName = "book_id";
+            this.txtBookID.HeaderText = "Book ID";
+            this.txtBookID.Name = "txtBookID";
+            this.txtBookID.ReadOnly = true;
             // 
-            // btnDelete
+            // txtTitle
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Crimson;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(109, 343);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(100, 30);
-            this.btnDelete.TabIndex = 1;
-            this.btnDelete.Text = "Delete Schedule";
-            this.btnDelete.UseVisualStyleBackColor = false;
+            this.txtTitle.DataPropertyName = "title";
+            this.txtTitle.HeaderText = "Title";
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.ReadOnly = true;
+            // 
+            // txtIsbn
+            // 
+            this.txtIsbn.DataPropertyName = "isbn";
+            this.txtIsbn.HeaderText = "ISBN";
+            this.txtIsbn.Name = "txtIsbn";
+            this.txtIsbn.ReadOnly = true;
             // 
             // MyBooks
             // 
@@ -131,25 +139,25 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvSchedules);
             this.Name = "MyBooks";
             this.Size = new System.Drawing.Size(655, 386);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSchedules)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvSchedules;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtScheduleID;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtAccountID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtBookID;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtDateStart;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtDateEnd;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtStatus;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtBookID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtIsbn;
     }
 }

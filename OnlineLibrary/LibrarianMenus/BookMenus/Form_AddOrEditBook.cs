@@ -125,7 +125,8 @@ namespace OnlineLibrary.LibrarianMenus.BookMenus
 
         private void btnAddOrEditBook_Click(object sender, EventArgs e)
         {
-            saveBook();
+            if (Validators.areTextBoxesNotEmpty(new TextBox[] { tbTitle, tbAuthor })) saveBook();
+            else MessageBox.Show("Please enter the title and author.");
         }
 
         private void btnAddImage_Click(object sender, EventArgs e)
