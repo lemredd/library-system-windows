@@ -123,6 +123,7 @@
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "BorrowerUI";
             this.Text = "BorrowerUI";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BorrowerUI_FormClosing);

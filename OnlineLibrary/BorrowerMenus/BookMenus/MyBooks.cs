@@ -24,7 +24,7 @@ namespace OnlineLibrary.BorrowerMenus.BookMenus
 
         private void populateTable()
         {
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LibrarianConn))
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LocalConn))
             {
                 conn.Open();
 
@@ -47,7 +47,7 @@ namespace OnlineLibrary.BorrowerMenus.BookMenus
                 {
                     if (MessageBox.Show("Are you sure about this?", "Delete Schedule", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LibrarianConn))
+                        using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LocalConn))
                         {
                             conn.Open();
 

@@ -35,7 +35,7 @@ namespace OnlineLibrary.LibrarianMenus.ScheduleMenus
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LibrarianConn))
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LocalConn))
             {
                 conn.Open();
 

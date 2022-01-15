@@ -21,7 +21,7 @@ namespace OnlineLibrary.LibrarianMenus
 
         private void populateTable()
         {
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LibrarianConn))
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LocalConn))
             {
                 conn.Open();
 
@@ -64,7 +64,7 @@ namespace OnlineLibrary.LibrarianMenus
             {
                 if (MessageBox.Show("Are you sure about deleting this account? It would also delete any schedules set by this account.", "Delete Account", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LibrarianConn))
+                    using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LocalConn))
                     {
                         conn.Open();
 

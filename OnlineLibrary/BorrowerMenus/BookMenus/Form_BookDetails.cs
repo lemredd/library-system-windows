@@ -62,7 +62,7 @@ namespace OnlineLibrary.BorrowerMenus.BookMenus
                 if (compareDates > 0) MessageBox.Show("The end date of your borrowing schedule should not be earlier than the start date.");
                 else
                 {
-                    using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LibrarianConn))
+                    using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LocalConn))
                     {
                         conn.Open();
 

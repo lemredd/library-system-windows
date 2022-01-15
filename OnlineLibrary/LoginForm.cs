@@ -19,7 +19,7 @@ namespace OnlineLibrary
 
         private DataTable accountLookup(Boolean borrowerSignIn)
         {
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LibrarianConn))
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LocalConn))
             {
                 conn.Open();
 

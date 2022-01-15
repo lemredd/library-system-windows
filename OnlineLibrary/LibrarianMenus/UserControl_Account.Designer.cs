@@ -31,14 +31,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnBorrowers = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnsave = new System.Windows.Forms.Button();
-            this.btnedit = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbpassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbname = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,8 +70,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.btnsave);
-            this.panel1.Controls.Add(this.btnedit);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.tbpassword);
             this.panel1.Controls.Add(this.label4);
@@ -84,31 +80,17 @@
             this.panel1.Size = new System.Drawing.Size(681, 386);
             this.panel1.TabIndex = 4;
             // 
-            // btnsave
+            // pictureBox1
             // 
-            this.btnsave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(123)))), ((int)(((byte)(0)))));
-            this.btnsave.FlatAppearance.BorderSize = 0;
-            this.btnsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnsave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnsave.Location = new System.Drawing.Point(175, 318);
-            this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(78, 34);
-            this.btnsave.TabIndex = 21;
-            this.btnsave.Text = "Save";
-            this.btnsave.UseVisualStyleBackColor = false;
-            // 
-            // btnedit
-            // 
-            this.btnedit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(123)))), ((int)(((byte)(0)))));
-            this.btnedit.FlatAppearance.BorderSize = 0;
-            this.btnedit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnedit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnedit.Location = new System.Drawing.Point(44, 318);
-            this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(78, 34);
-            this.btnedit.TabIndex = 20;
-            this.btnedit.Text = "Edit";
-            this.btnedit.UseVisualStyleBackColor = false;
+            this.pictureBox1.BackgroundImage = global::OnlineLibrary.Properties.Resources.profile_icon1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = global::OnlineLibrary.Properties.Resources.profile_icon1;
+            this.pictureBox1.Location = new System.Drawing.Point(44, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(209, 209);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
             // 
             // label5
             // 
@@ -122,11 +104,13 @@
             // 
             // tbpassword
             // 
+            this.tbpassword.Enabled = false;
             this.tbpassword.Location = new System.Drawing.Point(441, 125);
             this.tbpassword.Name = "tbpassword";
             this.tbpassword.PasswordChar = '•';
             this.tbpassword.Size = new System.Drawing.Size(198, 20);
             this.tbpassword.TabIndex = 18;
+            this.tbpassword.Text = "12345";
             // 
             // label4
             // 
@@ -140,10 +124,12 @@
             // 
             // tbname
             // 
+            this.tbname.Enabled = false;
             this.tbname.Location = new System.Drawing.Point(438, 62);
             this.tbname.Name = "tbname";
             this.tbname.Size = new System.Drawing.Size(198, 20);
             this.tbname.TabIndex = 14;
+            this.tbname.Text = "admin";
             // 
             // lblUsername
             // 
@@ -154,16 +140,6 @@
             this.lblUsername.Size = new System.Drawing.Size(70, 16);
             this.lblUsername.TabIndex = 13;
             this.lblUsername.Text = "Username";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::OnlineLibrary.Properties.Resources.profile_icon1;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(44, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(209, 209);
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
             // 
             // UserControl_Profile
             // 
@@ -187,8 +163,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBorrowers;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnsave;
-        private System.Windows.Forms.Button btnedit;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbpassword;
         private System.Windows.Forms.Label label4;

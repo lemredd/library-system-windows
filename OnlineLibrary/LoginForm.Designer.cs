@@ -257,19 +257,19 @@
             this.labelLogo.AutoSize = true;
             this.labelLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLogo.ForeColor = System.Drawing.Color.Navy;
-            this.labelLogo.Location = new System.Drawing.Point(143, 38);
+            this.labelLogo.Location = new System.Drawing.Point(133, 39);
             this.labelLogo.Name = "labelLogo";
-            this.labelLogo.Size = new System.Drawing.Size(267, 46);
+            this.labelLogo.Size = new System.Drawing.Size(221, 46);
             this.labelLogo.TabIndex = 1;
-            this.labelLogo.Text = "Online Library";
+            this.labelLogo.Text = "Bookanizer";
             // 
             // picboxLogo
             // 
-            this.picboxLogo.Image = global::OnlineLibrary.Properties.Resources.logo_icon_64;
-            this.picboxLogo.Location = new System.Drawing.Point(3, 3);
+            this.picboxLogo.Image = global::OnlineLibrary.Properties.Resources.bookanizer_logo;
+            this.picboxLogo.Location = new System.Drawing.Point(36, 3);
             this.picboxLogo.Name = "picboxLogo";
-            this.picboxLogo.Size = new System.Drawing.Size(134, 109);
-            this.picboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxLogo.Size = new System.Drawing.Size(90, 109);
+            this.picboxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picboxLogo.TabIndex = 0;
             this.picboxLogo.TabStop = false;
             // 

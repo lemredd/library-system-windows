@@ -140,6 +140,7 @@
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panel2);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "LibrarianUI";
             this.Text = "Librarian Menu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LibrarianUI_FormClosing);

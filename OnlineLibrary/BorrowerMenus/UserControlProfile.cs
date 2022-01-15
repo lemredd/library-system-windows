@@ -26,7 +26,7 @@ namespace OnlineLibrary.BorrowerPanels
 
         private void populateFields()
         {
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LibrarianConn))
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LocalConn))
             {
                 conn.Open();
 
@@ -57,7 +57,7 @@ namespace OnlineLibrary.BorrowerPanels
         {
             if (areTextBoxesNotEmpty(new TextBox[] {tbUsername, tbPassword}))
             {
-                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LibrarianConn))
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LocalConn))
                 {
                     conn.Open();
 

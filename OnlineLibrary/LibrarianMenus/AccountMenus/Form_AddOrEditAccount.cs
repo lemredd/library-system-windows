@@ -41,7 +41,7 @@ namespace OnlineLibrary.LibrarianMenus.AccountMenus
             {
                 if (areTextBoxesNotEmpty(new TextBox[] {tbUsername, tbPassword}))
                 {
-                    using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LibrarianConn))
+                    using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LocalConn))
                     {
                         conn.Open();
 
@@ -63,7 +63,7 @@ namespace OnlineLibrary.LibrarianMenus.AccountMenus
             {
                 if (areTextBoxesNotEmpty(new TextBox[] { tbUsername, tbPassword }))
                 {
-                    using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LibrarianConn))
+                    using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LocalConn))
                     {
                         conn.Open();
 

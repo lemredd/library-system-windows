@@ -25,14 +25,14 @@ namespace OnlineLibrary.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LEM-LAPTOP\\SQLEXPRESS;Initial Catalog=BookanizerDB;Integrated Securit" +
-            "y=True;Pooling=False")]
-        public string LibrarianConn {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\mssqllocaldb;Initial Catalog=BookanizerDB;Integrated Securi" +
+            "ty=True;Pooling=False")]
+        public string LocalConn {
             get {
-                return ((string)(this["LibrarianConn"]));
+                return ((string)(this["LocalConn"]));
             }
             set {
-                this["LibrarianConn"] = value;
+                this["LocalConn"] = value;
             }
         }
         
@@ -40,12 +40,12 @@ namespace OnlineLibrary.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=tcp:lem-laptop,49172;Initial Catalog=BookanizerDB;Integrated Security" +
             "=True;Pooling=False")]
-        public string RegularConn {
+        public string NetworkConn {
             get {
-                return ((string)(this["RegularConn"]));
+                return ((string)(this["NetworkConn"]));
             }
             set {
-                this["RegularConn"] = value;
+                this["NetworkConn"] = value;
             }
         }
     }

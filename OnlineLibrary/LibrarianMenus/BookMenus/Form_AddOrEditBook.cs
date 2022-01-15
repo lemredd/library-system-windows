@@ -87,7 +87,7 @@ namespace OnlineLibrary.LibrarianMenus.BookMenus
 
         private void saveBook()
         {
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LibrarianConn))
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LocalConn))
             {
                 byte[] imageBlobData = imageBlob();
                 SqlParameter imageParameter;

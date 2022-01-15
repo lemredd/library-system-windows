@@ -25,7 +25,7 @@ namespace OnlineLibrary.BorrowerMenus.BookMenus
 
         private void populateTable()
         {
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LibrarianConn))
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.LocalConn))
             {
                 conn.Open();
 
